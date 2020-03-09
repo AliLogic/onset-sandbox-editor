@@ -42,7 +42,7 @@ AddRemoteEvent('SetPlayerLocation', Editor_SetPlayerLocation)
 
 function Editor_CreateObject(player, objectID, x, y, z, rx, ry, rz, sx, sy, sz)
   local _object = CreateObject(objectID, x, y, z)
-  if _object then
+  if _object ~= false then
     if (rx ~= nil and sx ~= nil) then
       SetObjectRotation(_object, rx, ry, rz)
       SetObjectScale(_object, sx, sy, sz)

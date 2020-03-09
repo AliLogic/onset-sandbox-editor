@@ -98,6 +98,10 @@ var VEHICLE_CONFIG = [
   {
     "vehicleID": 25,
     "modelID": 1817
+  },
+  {
+    "vehicleID": 26,
+    "modelID": 1843
   }
 ];
 
@@ -354,7 +358,8 @@ var DOOR_CONFIG = [
   },
   {
     "doorID": 35,
-    "modelID": 766
+    "modelID": 766,
+    "pictureID": 35,
   },
   {
     "doorID": 36,
@@ -380,5 +385,210 @@ var DOOR_CONFIG = [
     "doorID": 40,
     "modelID": 767,
     "pictureID": 40
+  },
+  {
+    "doorID": 41,
+    "modelID": 767,
+    "pictureID": 41
+  },
+  {
+    "doorID": 42,
+    "modelID": 767,
+    "pictureID": 42
+  },
+  {
+    "doorID": 43,
+    "modelID": 767,
+    "pictureID": 43
+  },
+  {
+    "doorID": 44,
+    "modelID": 767,
+    "pictureID": 44
+  },
+  {
+    "doorID": 45,
+    "modelID": 767,
+    "pictureID": 45
+  },
+  {
+    "doorID": 46,
+    "modelID": 767,
+    "pictureID": 46
+  },
+  {
+    "doorID": 47,
+    "modelID": 767,
+    "pictureID": 47
+  },
+  {
+    "doorID": 48,
+    "modelID": 767,
+    "pictureID": 48
+  },
+  {
+    "doorID": 49,
+    "modelID": 767,
+    "pictureID": 49
+  },
+  {
+    "doorID": 50,
+    "modelID": 767,
+    "pictureID": 50
+  },
+  {
+    "doorID": 51,
+    "modelID": 767,
+    "pictureID": 51
+  },
+  {
+    "doorID": 52,
+    "modelID": 767,
+    "pictureID": 52
+  },
+  {
+    "doorID": 53,
+    "modelID": 767,
+    "pictureID": 53
+  },
+  {
+    "doorID": 54,
+    "modelID": 767,
+    "pictureID": 54
+  },
+  {
+    "doorID": 55,
+    "modelID": 767,
+    "pictureID": 55
+  },
+  {
+    "doorID": 56,
+    "modelID": 176,
+    "pictureID": 56
+  },
+  {
+    "doorID": 57,
+    "modelID": 177,
+    "pictureID": 57
+  },
+  {
+    "doorID": 58,
+    "modelID": 739,
+    "pictureID": 58
+  },
+  {
+    "doorID": 59,
+    "modelID": 767,
+    "pictureID": 59
+  },
+  {
+    "doorID": 60,
+    "modelID": 767,
+    "pictureID": 60
+  },
+  {
+    "doorID": 61,
+    "modelID": 767,
+    "pictureID": 61
+  },
+  {
+    "doorID": 62,
+    "modelID": 767,
+    "pictureID": 62
+  },
+  {
+    "doorID": 63,
+    "modelID": 767,
+    "pictureID": 63
+  },
+  {
+    "doorID": 64,
+    "modelID": 767,
+    "pictureID": 64
+  },
+  {
+    "doorID": 65,
+    "modelID": 1465,
+    "pictureID": 65
+  },
+  {
+    "doorID": 66,
+    "modelID": 714,
+    "pictureID": 66
+  },
+  {
+    "doorID": 67,
+    "modelID": 767,
+    "pictureID": 67
+  },
+  {
+    "doorID": 68,
+    "modelID": 767,
+    "pictureID": 68
+  },
+  {
+    "doorID": 69,
+    "modelID": 767,
+    "pictureID": 69
+  },
+  {
+    "doorID": 70,
+    "modelID": 767,
+    "pictureID": 70
+  },
+  {
+    "doorID": 71,
+    "modelID": 767,
+    "pictureID": 71
+  },
+  {
+    "doorID": 72,
+    "modelID": 767,
+    "pictureID": 72
+  },
+  {
+    "doorID": 73,
+    "modelID": 767,
+    "pictureID": 73
+  },
+  {
+    "doorID": 74,
+    "modelID": 767,
+    "pictureID": 74
+  },
+  {
+    "doorID": 75,
+    "modelID": 767,
+    "pictureID": 75
+  },
+  {
+    "doorID": 76,
+    "modelID": 767,
+    "pictureID": 76
+  },
+  {
+    "doorID": 77,
+    "modelID": 767,
+    "pictureID": 77
+  },
+  {
+    "doorID": 78,
+    "modelID": 767,
+    "pictureID": 78
+  },
+  {
+    "doorID": 79,
+    "modelID": 767,
+    "pictureID": 79
+  },
+  {
+    "doorID": 80,
+    "modelID": 767,
+    "pictureID": 80
+  },
+  {
+    "doorID": 81,
+    "modelID": 767,
+    "pictureID": 81
   }
 ];

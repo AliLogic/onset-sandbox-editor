@@ -67,8 +67,10 @@ local function Editor_LoadWorld()
     for _,v in pairs(_table) do
       if v['modelID'] ~= nil then
         Editor_CreateObject(nil, v['modelID'], v['x'], v['y'], v['z'], v['rx'], v['ry'], v['rz'], v['sx'], v['sy'], v['sz'])
+        print("CreateObject("..v['modelID']..", "..v['x']..", "..v['y']..", "..v['z']..", "..v['rx']..", "..v['ry']..", "..v['rz']..", "..v['sx']..", "..v['sy']..", "..v['sz']..")")
       else
         Editor_CreateDoor(v['doorID'], v['x'], v['y'], v['z'], v['yaw'])
+        print("CreateDoor("..v['doorID']..", "..v['x']..", "..v['y']..", "..v['z']..", "..v['yaw']..")")
       end
     end
 
