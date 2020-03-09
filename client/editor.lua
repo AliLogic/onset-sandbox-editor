@@ -273,6 +273,16 @@ local function Editor_OnKeyRelease(key)
 				end
 			end
 		end
+	elseif key == "Page Up" then
+		if (EditorSelectedObject ~= 0) then
+			local x, y, z = GetObjectLocation(EditorSelectedObject)
+			Editor_SyncObject(EditorSelectedObject, x, y, z + 100.0)
+		end
+	elseif key == "Page Down" then
+		if (EditorSelectedObject ~= 0) then
+			local x, y, z = GetObjectLocation(EditorSelectedObject)
+			Editor_SyncObject(EditorSelectedObject, x, y, z - 100.0)
+		end
 	end
 end
 AddEvent('OnKeyRelease', Editor_OnKeyRelease)
