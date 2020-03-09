@@ -134,7 +134,7 @@ local function Editor_OnKeyRelease(key)
 		else
 			EditorState = EDITOR_CLOSED
 		end
-	elseif (key == 'F' and EditorState == EDITOR_OPEN) then 
+	elseif (key == 'F' and EditorState == EDITOR_OPEN) then
 		local x, y, z, distance = GetMouseHitLocation()
 		CallRemoteEvent('SetPlayerLocation', x, y, z + 100)
 	elseif (key == 'Left Mouse Button' and EditorState == EDITOR_OPEN and EditorPendingPlacement) then
@@ -151,7 +151,7 @@ local function Editor_OnKeyRelease(key)
 		elseif EditorPendingType == EDITOR_TYPE_SCHEMATIC then
 			
 		end
-	elseif (key == 'Left Alt' and EditorState == EDITOR_OPEN and EditorSelectedObject ~= 0) then 
+	elseif (key == 'Left Alt' and EditorState == EDITOR_OPEN and EditorSelectedObject ~= 0) then
 		if EditorSelectedObjectMode == EDIT_LOCATION then
 			EditorSelectedObjectMode = EDIT_ROTATION
 		elseif EditorSelectedObjectMode == EDIT_ROTATION then
@@ -161,7 +161,7 @@ local function Editor_OnKeyRelease(key)
 		end
 
 		SetObjectEditable(EditorSelectedObject, EditorSelectedObjectMode)
-	elseif (key == 'Delete' and EditorState == EDITOR_OPEN) then 
+	elseif (key == 'Delete' and EditorState == EDITOR_OPEN) then
 		if (EditorSelectedObject ~= 0) then
 			CallRemoteEvent('DeleteObject', EditorSelectedObject)
 
@@ -236,10 +236,10 @@ local function Editor_OnKeyRelease(key)
 				EditorPendingData['extra'] = _extra
 			end
 		end
-	elseif (key == 'G' and EditorState == EDITOR_OPEN) then 
+	elseif (key == 'G' and EditorState == EDITOR_OPEN) then
 		local x, y, z, distance = GetMouseHitLocation()
 		CallRemoteEvent('CreateFirework', x, y, z)
-	elseif key == 'F10' then 
+	elseif key == 'F10' then
 		if UIState == UI_SHOWN then
 			UIState = UI_HIDDEN
 
