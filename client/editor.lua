@@ -672,6 +672,10 @@ local function Editor_OnPlayerSpawn()
 	end
 end
 AddEvent('OnPlayerSpawn', Editor_OnPlayerSpawn)
+
+local function SetObjectEditorSpeed(speed)
+	SetObjectEditorSpeed(speed)
+end
 AddRemoteEvent('SetEditorSpeed', SetObjectEditorSpeed)
 
 local function Editor_OnPlayerChatWindow(bEnabled)
