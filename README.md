@@ -1,5 +1,5 @@
 # onset-sandbox-editor
-Authors: Digital, Logic_
+Authors: Digital (original author), Logic_ (maintainer)
 
 #### Features
 * Camera.
@@ -28,6 +28,7 @@ Weapons will not work unless you enable the "default" package.<br/>
 
 #### Updates
 * Rewrote the duplication logic.  Now it duplicates the object and spawns it at the same position and selects it so you can move it.
+* Easy object height changing keys.
 * Added new vehicle ID 26 (Buzzard) support.
 * Added all game doors until the update 1.1.0 (Released 8th of March, 2020)
 
