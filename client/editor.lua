@@ -267,7 +267,7 @@ local function Editor_OnKeyRelease(key)
 				SetWebVisibility(EditorObjectsUI, WEB_VISIBLE)
 				SetWebVisibility(EditorToolbarUI, WEB_HITINVISIBLE)
 				SetWebVisibility(EditorFooterUI, WEB_HITINVISIBLE)
-				
+
 				if EditorSelectedObject ~= 0 then
 					SetWebVisibility(EditorPreciseUI, WEB_VISIBLE)
 				end
@@ -277,11 +277,13 @@ local function Editor_OnKeyRelease(key)
 		if (EditorSelectedObject ~= 0) then
 			local x, y, z = GetObjectLocation(EditorSelectedObject)
 			Editor_SyncObject(EditorSelectedObject, x, y, z + 100.0)
+			Editor_OnTimerTick()
 		end
 	elseif key == "Page Down" then
 		if (EditorSelectedObject ~= 0) then
 			local x, y, z = GetObjectLocation(EditorSelectedObject)
 			Editor_SyncObject(EditorSelectedObject, x, y, z - 100.0)
+			Editor_OnTimerTick()
 		end
 	end
 end
@@ -302,9 +304,6 @@ local function Editor_OnKeyPress(key)
 					Editor_SelectDoor(EntityId)
 				end
 			else
-
-				AddPlayerChat("[TEST] Unselected object!")
-
 				Editor_SelectObject(0)
 			end
 		elseif EntityType == HIT_OBJECT then
@@ -518,8 +517,6 @@ function Editor_SelectObject(object)
 			CallEvent('OnObjectToggleSelect', object, true)
 
 			SetInputMode(INPUT_GAMEANDUI)
-
-			AddPlayerChat("[TEST] Object selected!")
 
 			EditorSelectedObjectEdited = false
 			EditorSelectedObject = object
