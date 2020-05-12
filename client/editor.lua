@@ -296,34 +296,32 @@ local function Editor_OnKeyPress(key)
 	if (key == 'Left Mouse Button' and bDoubleClick and EditorState == EDITOR_OPEN) then
 		local EntityType, EntityId = GetMouseHitEntity()
 
-		if (EntityType == HIT_OBJECT and EntityId ~= 0) then
-			if (EditorSelectedObject ~= EntityId) then
-				if IsValidObject(EntityId) then
-					Editor_SelectObject(EntityId)
-				elseif IsValidDoor(EntityId) then
+		AddPlayerChat("[TEST] Hit " .. EntityType .. " ID " .. EntityId .. ".")
+
+		if (EntityType == HIT_OBJECT) then
+
+			if (EntityId ~= 0) then -- If valid object was selected
+
+				if (EditorSelectedObject ~= EntityId) then -- Oh new object selected now
+					if IsValidObject(EntityId) then
+						Editor_SelectObject(EntityId) -- Select the entity
+					end
+				else
+					Editor_SelectObject(0)
+				end
+			end
+
+		elseif (EntityType == HIT_DOOR) then
+
+
+			if (EntityId ~= 0) then
+				if (EditorSelectedObject ~= EntityId) then
 					Editor_SelectDoor(EntityId)
-				end
-			else
-				Editor_SelectObject(0)
-			end
-		elseif EntityType == HIT_OBJECT then
-			local x, y, z = GetMouseHitLocation()
-
-			-- TEMP: solution because we can't get doors from GetMouseHitEntity()
-			local _dis = 1000000000
-			for _,v in pairs(GetStreamedDoors()) do
-				local dx, dy, dz = GetDoorLocation(v)
-				local distance = GetDistanceSquared3D(x, y, z, dx, dy, dz)
-
-				if (distance <= 150000 and distance < _dis) then
-					EntityId = v
-					_dis = distance
+				else
+					Editor_SelectObject(0)
 				end
 			end
 
-			if (EntityId ~= 0 and EditorSelectedObject ~= EntityId) then
-				Editor_SelectDoor(EntityId)
-			end
 		end
 	end
 end

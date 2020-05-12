@@ -89,6 +89,8 @@
         "RGB",
         "INPUT_GAME",
         "GetCameraLocation",
-        "EDIT_NONE"
+        "EDIT_NONE",
+        "HIT_DOOR",
+        "HIT_VEHICLE"
     ]
 }
