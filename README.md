@@ -27,10 +27,7 @@ Weapons will not work unless you enable the "default" package.<br/>
 [Vehicles](https://cdn.felfire.app/e68f2ed093420786f742d612ffffa8a8.png)
 
 #### Updates
-* Rewrote the duplication logic.  Now it duplicates the object and spawns it at the same position and selects it so you can move it.
-* Easy object height changing keys.
-* Added new vehicle ID 26 (Buzzard) support.
-* Added all game doors until the update 1.1.0 (Released 8th of March, 2020)
+* Refer to commit log
 
 #### Modification
 * To add more vehicles, refer to VEHICLE_CONFIG and TOTAL_VEHICLES.
