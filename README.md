@@ -15,8 +15,8 @@ Authors: Digital (original author), Logic_ (maintainer)
 * Schematics (Save & load custom builds).
 
 #### Installation
-Create a folder inside your servers package folder called sandbox, download all files from this repository and place them inside the sandbox folder.
-Edit your server_config.json to install sandbox as a package.
+Create a folder inside your servers package folder called sandbox, download all files from this repository and place them inside the `sandbox` folder.
+Edit your server_config.json to install `sandbox` as a package. The folder name should be `sandbox` otherwise the package will not work as expected!
 Weapons will not work unless you enable the "default" package.<br/>
 ![Config](https://cdn.felfire.app/55c69ef1e5eadca4c5101bb4195160b5.png)
 
