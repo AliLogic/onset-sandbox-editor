@@ -12,7 +12,8 @@ let state = {
   vehicleLoaded : false,
   weaponLoaded : false,
   doorLoaded : false,
-  clothingLoaded : false
+  clothingLoaded : false,
+  propsLoaded : false
 };
 
 function SetState(to) {
@@ -72,12 +73,13 @@ OnDocumentReady(function() {
   };
 });
 
-function Load(objectCount, vehicleCount, weaponCount, clothingCount, doorCount) {
+function Load(objectCount, vehicleCount, weaponCount, clothingCount, doorCount, customProps) {
   LoadObjects(objectCount);
   LoadVehicles(vehicleCount);
   LoadWeapons(weaponCount);
   LoadDoors(doorCount);
   LoadClothing(clothingCount);
+  LoadProps(customProps);
 }
 
 function LoadObjects(amount) {
@@ -91,6 +93,35 @@ function LoadObjects(amount) {
     appendHTML += `<div class="item" data-id="${i}">
       <img src="http://game/objects/${i}" />
       <div class="top-left">${i}</div>
+    </div>`;
+  }
+  listbox.innerHTML += appendHTML;
+
+  let nodes = listbox.getElementsByClassName('item');
+  for (let i = 0; i < nodes.length; i++) {
+    let node = nodes[i];
+
+    node.onclick = function() {
+      CallEvent('CreateObjectPlacement', this.dataset.id);
+    };
+  }
+}
+
+function LoadProps(customProps) {
+  if (state.propsLoaded) return;
+  state.propsLoaded = true;
+
+  let amount = customProps.length;
+  let listbox = document.getElementById('objects');
+
+  let appendHTML = '';
+  for (let i = 0; i < amount + 1; i++) {
+    let customCfg = customProps[i];
+    let modelID = customCfg.modelID;
+
+    appendHTML += `<div class="item" data-id="${i}">
+      <img src="http://asset/sandbox/client/ui/common/props/${modelID}.jpg" />
+      <div class="top-left">${modelID}</div>
     </div>`;
   }
   listbox.innerHTML += appendHTML;

@@ -62,6 +62,7 @@ local function Editor_LoadWorld()
 
   print('Server: Attempting to load world.')
 
+  EditorPropsData = File_LoadJSONTable('props.json')
   local _table = File_LoadJSONTable('world.json')
   if _table ~= nil then
     for _,v in pairs(_table) do

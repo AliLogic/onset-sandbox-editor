@@ -1,5 +1,7 @@
 EditorDoorData = {}
 
+EditorPropsData = {}
+
 local DoorConfig = {
   [6]=180,
   [17]=180,

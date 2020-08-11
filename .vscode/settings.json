@@ -91,6 +91,8 @@
         "GetCameraLocation",
         "EDIT_NONE",
         "HIT_DOOR",
-        "HIT_VEHICLE"
+        "HIT_VEHICLE",
+        "ReplaceObjectModelMesh",
+        "LoadPak"
     ]
 }

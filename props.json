@@ -1,0 +1,9 @@
+[
+	{
+		"modelID": 10000,
+		"pakName": "custom.pak",
+		"rootPath": "/rootpath/",
+		"contentPath": "/contentPath/",
+		"pathToMesh": "/pathToMesh/"
+	}
+]

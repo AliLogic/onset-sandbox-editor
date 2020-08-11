@@ -41,6 +41,26 @@ local TOTAL_VEHICLES = 36
 local TOTAL_WEAPONS = 21
 local TOTAL_DOORS = 81
 local TOTAL_CLOTHING = 30
+local PROP_TABLE = nil
+
+local EditorLoaded = false
+
+local function Editor_LoadProps(customProps)
+	if customProps ~= nil then
+		PROP_TABLE = customProps
+		for k, v in pairs(customProps) do
+			local modelid = v['modelID']
+			local pak = v['pakName']
+			local root = v['rootPath']
+			local content = v['contentPath']
+			local mesh = v['pathToMesh']
+
+			LoadPak(pak, root, content)
+			ReplaceObjectModelMesh(modelid, mesh)
+		end
+	end
+end
+AddRemoteEvent('LoadProps', Editor_LoadProps)
 
 local function Editor_OnPackageStart()
 	-- Load information
@@ -338,9 +358,12 @@ local function Editor_OnServerChangeEditor(bEnabled)
 		SetWebVisibility(EditorFooterUI, WEB_HITINVISIBLE)
 		SetInputMode(INPUT_GAMEANDUI)
 
-		Delay(500, function()
-			ExecuteWebJS(EditorObjectsUI, 'Load (' .. GetObjectModelCount() .. ', ' .. TOTAL_VEHICLES .. ', ' .. TOTAL_WEAPONS .. ', ' .. TOTAL_CLOTHING .. ', ' .. TOTAL_DOORS .. ')')
-		end)
+		if EditorLoaded == false then
+			EditorLoaded = true
+			Delay(500, function()
+				ExecuteWebJS(EditorObjectsUI, 'Load (' .. GetObjectModelCount() .. ', ' .. TOTAL_VEHICLES .. ', ' .. TOTAL_WEAPONS .. ', ' .. TOTAL_CLOTHING .. ', ' .. TOTAL_DOORS .. ', ' .. PROP_TABLE .. ')')
+			end)
+		end
 	else
 		SetWebVisibility(EditorObjectsUI, WEB_HIDDEN)
 		SetWebVisibility(EditorToolbarUI, WEB_HIDDEN)
