@@ -137,11 +137,27 @@ var VEHICLE_CONFIG = [
   },
   {
     "vehicleID": 35,
-    "modelID": 1850,
+    "modelID": 1850
   },
   {
     "vehicleID": 36,
     "modelID": 1850
+  },
+  {
+    "vehicleID": 37,
+    "modelID": 1851
+  },
+  {
+    "vehicleID": 38,
+    "modelID": 1852
+  },
+  {
+    "vehicleID": 39,
+    "modelID": 1853
+  },
+  {
+    "vehicleID": 40,
+    "modelID": 1853
   }
 ];
 
