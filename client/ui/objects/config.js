@@ -153,7 +153,7 @@ var VEHICLE_CONFIG = [
   },
   {
     "vehicleID": 39,
-    "modelID": 1853
+    "modelID": 1371
   },
   {
     "vehicleID": 40,

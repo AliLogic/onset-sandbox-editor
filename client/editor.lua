@@ -37,7 +37,7 @@ local EditorLastSyncData = {}
 local EditorLastClick = 0
 local EditorLastChatState = false
 
-local TOTAL_VEHICLES = 36
+local TOTAL_VEHICLES = 40
 local TOTAL_WEAPONS = 21
 local TOTAL_DOORS = 81
 local TOTAL_CLOTHING = 30
