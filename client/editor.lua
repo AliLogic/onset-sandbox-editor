@@ -121,7 +121,6 @@ function Editor_HandleCreateObject(x, y, z)
 end
 
 local function Editor_CreateObjectPlacement(objectID, rx, ry, rz, sx, sy, sz)
-	print(objectID, rx, ry, rz, sx, sy, sz)
 	objectID = tonumber(objectID)
 	if not EditorState == EDITOR_OPEN then return end
 	--if (objectID <= 0 or objectID > GetObjectModelCount()) then return end
