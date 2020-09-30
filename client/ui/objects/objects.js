@@ -115,11 +115,11 @@ function LoadProps(customProps) {
   let listbox = document.getElementById('objects');
 
   let appendHTML = '';
-  for (let i = 0; i < amount + 1; i++) {
+  for (let i = 0; i < amount; i++) {
     let customCfg = customProps[i];
     let modelID = customCfg.modelID;
 
-    appendHTML += `<div class="item" data-id="${i}">
+    appendHTML += `<div class="item" data-id="${modelID}">
       <img src="http://asset/sandbox/client/ui/common/props/${modelID}.jpg" />
       <div class="top-left">${modelID}</div>
     </div>`;
@@ -129,7 +129,6 @@ function LoadProps(customProps) {
   let nodes = listbox.getElementsByClassName('item');
   for (let i = 0; i < nodes.length; i++) {
     let node = nodes[i];
-
     node.onclick = function() {
       CallEvent('CreateObjectPlacement', this.dataset.id);
     };

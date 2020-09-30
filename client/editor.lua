@@ -121,9 +121,10 @@ function Editor_HandleCreateObject(x, y, z)
 end
 
 local function Editor_CreateObjectPlacement(objectID, rx, ry, rz, sx, sy, sz)
+	print(objectID, rx, ry, rz, sx, sy, sz)
 	objectID = tonumber(objectID)
 	if not EditorState == EDITOR_OPEN then return end
-	if (objectID <= 0 or objectID > GetObjectModelCount()) then return end
+	--if (objectID <= 0 or objectID > GetObjectModelCount()) then return end
 
 	EditorPendingType = EDITOR_TYPE_OBJECT
 	EditorPendingID = objectID
@@ -361,7 +362,7 @@ local function Editor_OnServerChangeEditor(bEnabled)
 		if EditorLoaded == false then
 			EditorLoaded = true
 			Delay(500, function()
-				ExecuteWebJS(EditorObjectsUI, 'Load (' .. GetObjectModelCount() .. ', ' .. TOTAL_VEHICLES .. ', ' .. TOTAL_WEAPONS .. ', ' .. TOTAL_CLOTHING .. ', ' .. TOTAL_DOORS .. ', ' .. PROP_TABLE .. ')')
+				ExecuteWebJS(EditorObjectsUI, 'Load (' .. GetObjectModelCount() .. ', ' .. TOTAL_VEHICLES .. ', ' .. TOTAL_WEAPONS .. ', ' .. TOTAL_CLOTHING .. ', ' .. TOTAL_DOORS .. ', ' .. json_encode(PROP_TABLE) .. ')')
 			end)
 		end
 	else
