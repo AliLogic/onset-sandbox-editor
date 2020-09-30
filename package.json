@@ -14,7 +14,9 @@
   "client_scripts": [
     "client/editor.lua",
     "client/folder.lua",
-    "client/scoreboard.lua"
+    "client/scoreboard.lua",
+
+    "common/json.lua"
   ],
   "files": [
     "client/ui/information/information.html",
@@ -170,7 +172,6 @@
     "client/ui/common/doors/80.jpg",
     "client/ui/common/doors/81.jpg",
 
-    "client/ui/common/props/10000.jpg",
-    "props/test.pak"
+    "client/ui/common/props/100000.jpg"
   ]
 }

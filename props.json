@@ -1,9 +1,9 @@
 [
 	{
-		"modelID": 10000,
-		"pakName": "custom.pak",
-		"rootPath": "/rootpath/",
-		"contentPath": "/contentPath/",
-		"pathToMesh": "/pathToMesh/"
+		"modelID" : 100000,
+		"pakName" : "pakname",
+		"rootPath" : "/pakname/",
+		"contentPath" : "../../../OnsetModding/Plugins/pakname/Content/",
+		"pathToMesh" : "/folder/assetname"
 	}
 ]
