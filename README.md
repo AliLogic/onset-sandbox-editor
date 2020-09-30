@@ -1,5 +1,5 @@
 # onset-sandbox-editor
-Authors: Digital (original author), Logic_ (maintainer)
+Authors: Digital (original author), Logic_ (maintainer) and other contributors!
 
 #### Features
 * Camera.
