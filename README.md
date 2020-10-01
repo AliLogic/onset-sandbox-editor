@@ -13,6 +13,7 @@ Authors: Digital (original author), Logic_ (maintainer) and other contributors!
 * Delete object(s).
 * Move, scale, rotate and copy object(s).
 * Schematics (Save & load custom builds).
+* Custom props support (add your own custom objects for use)
 
 #### Installation
 Create a folder inside your servers package folder called sandbox, download all files from this repository and place them inside the `sandbox` folder.
@@ -34,3 +35,4 @@ Weapons will not work unless you enable the "default" package.<br/>
 * To add more doors, refer to TOTAL_DOORS.
 * To add more weapons, refer to TOTAL_WEAPONS.
 * To add more clothing presets, refer to TOTAL_CLOTHING.
+* Edit props.json and your package file to include your custom props.
